@@ -2,6 +2,7 @@
   "name": "reduxexample",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://edma.at/JS_REACT-REDUX_PostBoard_Dummy",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -15,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build"
+    "deploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
