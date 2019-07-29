@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Posts from './components/Posts.js';
+import Postform from './components/Postform.js';
+import { Provider } from 'react-redux';
+import store from "./store";
+import Header from "./components/header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+      <div style={style} className="App">
+        <Header />
+        <Postform />
+        <hr></hr>
+        <Posts />
+      </div>
+      </Provider>
+    )
+  }
 }
 
-export default App;
+const style = {
+  background: '#282c34',
+  color: '#61dafb',
+  fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif'
+
+}
+
+ export default App
